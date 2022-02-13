@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script type = "text/javascript" src="js/index.js"></script>
+        <link href="style/index.css" rel="stylesheet">
+        <title>Jukebox</title>
+    </head>
+    <body>
+        <section>
+            <h4> Click on the arrow heads or dots to change song.</h4>
+            <div id="menu">
+                <!-- For music piece #1, "Ukulele"--------------------------------------------------------->
+                <div id="piece01" class="piece fade">
+                    <div id="piece01_playingNo" class="playingNo">
+                        <p id="piece01_topHeader" class="topHeader">playing 1 of 3</p>
+                    </div>
+                    <div id="piece01_photoBlock" class="photoBlock">
+                            <img id="piece01" class="photo" src="music_pieces/piece01/ukulele.jpg">
+                    </div>
+                    <div id="piece01_details" class="details">
+                        <h1 id="piece01_pieceName" class="pieceName">
+                            Ukulele
+                        </h1>
+                        <p id="piece01_artistName" class="artistName">
+                            Benjamin Tissot
+                        </p>
+                    </div>
+                    <div id="piece01_controls" class="controls">
+                        <div id="piece01_buttonset" class="button_set">
+                        <audio id="piece01_music" class="music" statusText="paused">
+                            <source src="music_pieces/piece01/bensound-ukulele.mp3" type="audio/mpeg">
+                            Your browser does not support mp3 files.
+                        </audio>
+                        <input id="piece01_back" onclick="backAudio('piece01_music', 'piece01_bar')" class="playback" type="button" value="|&#9664">
+                        <input id="piece01_play" onclick="playAudio('piece01_music', 'piece01_bar')" class="play" type="button" value="&#9654">
+                        <input id="piece01_pause" onclick="pauseAudio('piece01_music')" class="pause" type="button" value="&#9208">
+                        <input id="piece01_forward" onclick="forwardAudio('piece01_music', 'piece01_bar')" class="forward" type="button" value="&#x25B6|">
+                        </div>
+                    </div>
+                    <div id="piece01_barElements" class="barElements">
+                        <div id="pied01_mainBarContainer" class="mainBarContainer">
+                            <span id="piece01_zero" class="zero">0</span>
+                                    <div id="piece01_progress" class="progress">
+                                            <div id="piece01_bar" class="bar"></div>
+                                    </div>
+                            <span id="piece01_totalDuration" class="totalDuration">2:26</span>
+                        </div>
+                    </div>
+                    <div id="piece01_volumeElements" class="volumeElements">
+                        <span id="piece01_volume0" class="volume0">&#128264;</span>
+                        <input id="piece01_slider" type="range" min="0" max="100" value="level" class="volume_slider" onchange="adjustVolume('piece01_slider', 'piece01_music')">
+                        <span id="piece01_volume100" class="volume100">&#128266;</span>
+                    </div>
+                </div>
+
+                <!-- For music piece #2, "Better Days"--------------------------------------------------------->
+                <div id="piece02" class="piece fade">
+                    <div id="piece02_playingNo" class="playingNo">
+                        <p id="piece02_topHeader" class="topHeader">playing 2 of 3</p>
+                    </div>
+                    <div id="piece02_photoBlock" class="photoBlock">
+                            <img id="piece02" class="photo" src="music_pieces/piece02/betterdays.jpg">
+                    </div>
+                    <div id="piece02_details" class="details">
+                        <h1 id="piece02_pieceName" class="pieceName">
+                            Better Days
+                        </h1>
+                        <p id="piece02_artistName" class="artistName">
+                            Benjamin Tissot
+                        </p>
+                    </div>
+                    <div id="piece02_controls" class="controls">
+                        <div id="piece02_buttonset" class="button_set">
+                        <audio id="piece02_music" class="music" statusText="paused">
+                            <source src="music_pieces/piece02/bensound-betterdays.mp3" type="audio/mpeg">
+                            Your browser does not support mp3 files.
+                        </audio>
+                        <input id="piece02_back" onclick="backAudio('piece02_music', 'piece02_bar')" class="playback" type="button" value="|&#9664">
+                        <input id="piece02_play" onclick="playAudio('piece02_music', 'piece02_bar')" class="play" type="button" value="&#9654">
+                        <input id="piece02_pause" onclick="pauseAudio('piece02_music')" class="pause" type="button" value="&#9208">
+                        <input id="piece02_forward" onclick="forwardAudio('piece02_music', 'piece02_bar')" class="forward" type="button" value="&#x25B6|">
+                        </div>
+                    </div>
+                    <div id="piece02_barElements" class="barElements">
+                        <div id="pied01_mainBarContainer" class="mainBarContainer">
+                            <span id="piece02_zero" class="zero">0</span>
+                                    <div id="piece02_progress" class="progress">
+                                            <div id="piece02_bar" class="bar"></div>
+                                    </div>
+                            <span id="piece02_totalDuration" class="totalDuration">2:33</span>
+                        </div>
+                    </div>
+                    <div id="piece02_volumeElements" class="volumeElements">
+                        <span id="piece02_volume0" class="volume0">&#128264;</span>
+                        <input id="piece02_slider" type="range" min="0" max="100" value="level" class="volume_slider" onchange="adjustVolume('piece02_slider', 'piece02_music')">
+                        <span id="piece02_volume100" class="volume100">&#128266;</span>
+                    </div>
+                </div>
+
+                <!-- For music piece #3, "Sunnyt"--------------------------------------------------------->
+                <div id="piece03" class="piece fade">
+                    <div id="piece03_playingNo" class="playingNo">
+                        <p id="piece03_topHeader" class="topHeader">playing 1 of 3</p>
+                    </div>
+                    <div id="piece03_photoBlock" class="photoBlock">
+                            <img id="piece03" class="photo" src="music_pieces/piece03/sunny.jpg">
+                    </div>
+                    <div id="piece03_details" class="details">
+                        <h1 id="piece03_pieceName" class="pieceName">
+                            Sunny
+                        </h1>
+                        <p id="piece03_artistName" class="artistName">
+                            Benjamin Tissot
+                        </p>
+                    </div>
+                    <div id="piece03_controls" class="controls">
+                        <div id="piece03_buttonset" class="button_set">
+                        <audio id="piece03_music" class="music" statusText="paused">
+                            <source src="music_pieces/piece03/bensound-sunny.mp3" type="audio/mpeg">
+                            Your browser does not support mp3 files.
+                        </audio>
+                        <input id="piece03_back" onclick="backAudio('piece03_music', 'piece03_bar')" class="playback" type="button" value="|&#9664">
+                        <input id="piece03_play" onclick="playAudio('piece03_music', 'piece03_bar')" class="play" type="button" value="&#9654">
+                        <input id="piece03_pause" onclick="pauseAudio('piece03_music')" class="pause" type="button" value="&#9208">
+                        <input id="piece03_forward" onclick="forwardAudio('piece03_music', 'piece03_bar')" class="forward" type="button" value="&#x25B6|">
+                        </div>
+                    </div>
+                    <div id="piece03_barElements" class="barElements">
+                        <div id="pied01_mainBarContainer" class="mainBarContainer">
+                            <span id="piece03_zero" class="zero">0</span>
+                                    <div id="piece03_progress" class="progress">
+                                            <div id="piece03_bar" class="bar"></div>
+                                    </div>
+                            <span id="piece03_totalDuration" class="totalDuration">2:26</span>
+                        </div>
+                    </div>
+                    <div id="piece03_volumeElements" class="volumeElements">
+                        <span id="piece03_volume0" class="volume0">&#128264</span>
+                        <input id="piece03_slider" type="range" min="0" max="100" value="level" class="volume_slider" onchange="adjustVolume('piece03_slider', 'piece03_music')">
+                        <span id="piece03_volume100" class="volume100">&#128266</span>
+                    </div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div id="dots_panel" style="text-align:center">
+                <span id="dot01" class="dot" onclick="currentSlide('piece01')"></span>
+                <span id="dot02" class="dot" onclick="currentSlide('piece02')"></span>
+                <span id="dot03" class="dot" onclick="currentSlide('piece03')"></span>
+              </div>
+        </section>
+    </body>
+</html>
